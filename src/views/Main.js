@@ -9,10 +9,13 @@ import {
     StyleSheet,
     Text,
     View,
-    Dimensions
+    Dimensions,
+    ScrollView
 } from 'react-native';
 
 import Timer from '../components/Timer';
+import BottomMenu from '../components/BottomMenu';
+import BottomButton from '../components/BottomButton';
 
 const display = Dimensions.get('window');
 
@@ -23,6 +26,14 @@ export default class Main extends Component {
                 <View style={styles.timeContainer}>
                     <Timer />
                 </View>
+                <ScrollView style={styles.lapContainer}>
+
+                </ScrollView>
+                <BottomMenu>
+                    <BottomButton>START</BottomButton>
+                    <BottomButton>LAP</BottomButton>
+                    <BottomButton>STOP</BottomButton>
+                </BottomMenu>
             </View>
         );
     }
@@ -38,5 +49,8 @@ const styles = StyleSheet.create({
         height: display.width,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    lapContainer: {
+        flex: 1,
     }
 });
