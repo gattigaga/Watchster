@@ -16,6 +16,7 @@ import {
 import Timer from '../components/Timer';
 import BottomMenu from '../components/BottomMenu';
 import BottomButton from '../components/BottomButton';
+import Lap from '../components/Lap';
 
 const display = Dimensions.get('window');
 
@@ -27,7 +28,9 @@ export default class Main extends Component {
                     <Timer />
                 </View>
                 <ScrollView style={styles.lapContainer}>
-
+                    <Lap index={1} time="0:12:22" />
+                    <Lap index={2} time="0:32:22" />
+                    <Lap index={3} time="1:02:35" />
                 </ScrollView>
                 <BottomMenu>
                     <BottomButton>START</BottomButton>
