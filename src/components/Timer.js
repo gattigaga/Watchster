@@ -7,9 +7,17 @@ import {
 import PropTypes from 'prop-types';
 
 import Svg, { Circle } from 'react-native-svg';
+import moment from 'moment';
 
 export default class Timer extends Component {
     render() {
+        let { time } = this.props;
+
+        time = moment()
+            .startOf('day')
+            .second(time)
+            .format('HH:mm:ss');
+
         return (
             <View style={styles.container}>
                 <Svg
@@ -32,7 +40,7 @@ export default class Timer extends Component {
                         fill="none" />
                 </Svg>
                 <Text style={styles.time}>
-                    01:02:43
+                    {time}
                 </Text>
             </View>
         );
