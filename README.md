@@ -7,6 +7,10 @@ Watchster is a stopwatch which has features like :
 * Continue after stopped
 * Reset current laps and time
 
+### Demo
+
+![App Demo](demo.gif)
+
 ### MIT License
 
 &copy; 2017 - Gattigaga Hayyuta Dewa
