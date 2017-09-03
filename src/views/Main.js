@@ -1,7 +1,6 @@
 /**
  * Watchster
  * An open source Stopwatch App
- * @flow
  */
 
 import React, { Component } from 'react';
@@ -143,6 +142,9 @@ export default class Main extends Component {
                                 time={lap.time} />
                         );
                     })}
+                    {laps.length == 0 && 
+                        <Text style={styles.empty}>No laps created</Text>
+                    }
                 </ScrollView>
                 {this.renderBottomMenu()}
             </View>
@@ -163,5 +165,12 @@ const styles = StyleSheet.create({
     },
     lapContainer: {
         flex: 1,
+        backgroundColor: '#111',
+    },
+    empty: {
+        color: 'white',
+        marginTop: 48,
+        alignSelf: 'center',
+        fontSize: 20
     }
 });
