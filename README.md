@@ -1,6 +1,6 @@
-# Watchster - Stopwatch App
+# Watchster - Stopwatch App (React Native)
 
-Watchster is a stopwatch which has features like :
+Watchster is a stopwatch app for Android and created using React Native. It has following features like :
 * Start a time
 * Stop a time
 * Add New Lap
