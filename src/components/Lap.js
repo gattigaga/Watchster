@@ -22,7 +22,7 @@ export default class Lap extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.column}>
-                    <Text style={styles.lapIndex}>LAP 0{index}</Text>
+                    <Text style={styles.lapIndex}>LAP {index}</Text>
                 </View>
                 <View style={styles.column}>
                     <Text style={styles.lapTime}>{time}</Text>

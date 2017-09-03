@@ -1,6 +1,6 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * Watchster
+ * An open source Stopwatch App
  * @flow
  */
 
@@ -117,13 +117,16 @@ export default class Main extends Component {
     render() {
         let {
             time,
-            laps
+            laps,
+            condition
         } = this.state;
 
         return (
             <View style={styles.container}>
                 <View style={styles.timeContainer}>
-                    <Timer time={time} />
+                    <Timer 
+                        time={time} 
+                        isActive={condition == 'START'} />
                 </View>
                 <ScrollView style={styles.lapContainer}>
                     {laps.map((lap, index) => {
