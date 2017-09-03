@@ -40,6 +40,7 @@ export default class Main extends Component {
         this.start = this.start.bind(this);
         this.stop = this.stop.bind(this);
         this.lap = this.lap.bind(this);
+        this.reset = this.reset.bind(this);
         this.renderBottomMenu = this.renderBottomMenu.bind(this);
     }
 
@@ -73,6 +74,14 @@ export default class Main extends Component {
         }));
     }
 
+    reset() {
+        this.setState((prevState) => ({
+            time: 0,
+            laps: [],
+            condition: 'IDLE'
+        }));
+    }
+
     renderBottomMenu() {
         let { condition } = this.state;
 
@@ -95,7 +104,7 @@ export default class Main extends Component {
             case Condition.STOP:
                 return (
                     <BottomMenu>
-                        <BottomButton>RESET</BottomButton>
+                        <BottomButton onPress={this.reset}>RESET</BottomButton>
                         <BottomButton>CONTINUE</BottomButton>
                     </BottomMenu>
                 );
