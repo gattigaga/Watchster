@@ -3,7 +3,6 @@ import {
     StyleSheet,
     Text,
     View,
-    Animated
 } from 'react-native';
 import PropTypes from 'prop-types';
 import moment from 'moment';
@@ -21,14 +20,14 @@ export default class Lap extends Component {
             .format('HH:mm:ss');
 
         return (
-            <Animated.View style={styles.container}>
+            <View style={styles.container}>
                 <View style={styles.column}>
                     <Text style={styles.lapIndex}>LAP {index}</Text>
                 </View>
                 <View style={styles.column}>
                     <Text style={styles.lapTime}>{time}</Text>
                 </View>
-            </Animated.View>
+            </View>
         );
     }
 }
