@@ -105,7 +105,7 @@ export default class Main extends Component {
                 return (
                     <BottomMenu>
                         <BottomButton onPress={this.reset}>RESET</BottomButton>
-                        <BottomButton>CONTINUE</BottomButton>
+                        <BottomButton onPress={this.start}>CONTINUE</BottomButton>
                     </BottomMenu>
                 );
                 break;
