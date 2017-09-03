@@ -50,11 +50,11 @@ const styles = StyleSheet.create({
     },
     lapIndex: {
         color: 'white',
-        fontSize: 16,
+        fontSize: 20,
     },
     lapTime: {
         color: 'white',
-        fontSize: 16,
+        fontSize: 20,
         textAlign: 'right'
     }
 });
