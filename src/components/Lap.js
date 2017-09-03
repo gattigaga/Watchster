@@ -5,6 +5,7 @@ import {
     View
 } from 'react-native';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 export default class Lap extends Component {
     render() {
@@ -12,6 +13,11 @@ export default class Lap extends Component {
             index,
             time    
         } = this.props;
+
+        time = moment()
+            .startOf('day')
+            .second(time)
+            .format('HH:mm:ss');
 
         return (
             <View style={styles.container}>
@@ -28,7 +34,7 @@ export default class Lap extends Component {
 
 Lap.propTypes = {
     index: PropTypes.number.isRequired,
-    time: PropTypes.string.isRequired
+    time: PropTypes.number.isRequired
 };
 
 const styles = StyleSheet.create({

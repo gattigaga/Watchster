@@ -39,6 +39,7 @@ export default class Main extends Component {
         this.timeID = null;
         this.start = this.start.bind(this);
         this.stop = this.stop.bind(this);
+        this.lap = this.lap.bind(this);
         this.renderBottomMenu = this.renderBottomMenu.bind(this);
     }
 
@@ -66,6 +67,12 @@ export default class Main extends Component {
         clearInterval(this.timeID);
     }
 
+    lap() {
+        this.setState((prevState) => ({
+            laps: [ ...prevState.laps, prevState.time]
+        }));
+    }
+
     renderBottomMenu() {
         let { condition } = this.state;
 
@@ -80,7 +87,7 @@ export default class Main extends Component {
             case Condition.START:
                 return (
                     <BottomMenu>
-                        <BottomButton>LAP</BottomButton>
+                        <BottomButton onPress={this.lap}>LAP</BottomButton>
                         <BottomButton onPress={this.stop}>STOP</BottomButton>
                     </BottomMenu>
                 );
@@ -115,7 +122,7 @@ export default class Main extends Component {
                             <Lap 
                                 key={index} 
                                 index={index + 1} 
-                                time="1:02:35" />
+                                time={lap} />
                         );
                     })}
                 </ScrollView>
