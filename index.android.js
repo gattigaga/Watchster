@@ -1,20 +1,21 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * Watchster
+ * An open source Stopwatch App
  */
 
 import React, { Component } from 'react';
 import {
     AppRegistry,
-    StyleSheet,
-    Text,
-    View
+    StatusBar
 } from 'react-native';
 
 import Main from './src/views/Main';
 
 export default class Watchster extends Component {
+    componentDidMount() {
+        StatusBar.setHidden(true);
+    }
+
     render() {
         return (
             <Main />

@@ -1,8 +1,3 @@
-/**
- * Watchster
- * An open source Stopwatch App
- */
-
 import React, { Component } from 'react';
 import {
     StyleSheet,
