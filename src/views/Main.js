@@ -70,7 +70,13 @@ export default class Main extends Component {
 
     lap() {
         this.setState((prevState) => ({
-            laps: [ ...prevState.laps, prevState.time]
+            laps: [
+                { 
+                    id: prevState.laps.length + 1, 
+                    time: prevState.time 
+                },
+                ...prevState.laps
+            ]
         }));
     }
 
@@ -124,17 +130,17 @@ export default class Main extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.timeContainer}>
-                    <Timer 
-                        time={time} 
+                    <Timer
+                        time={time}
                         isActive={condition == 'START'} />
                 </View>
                 <ScrollView style={styles.lapContainer}>
                     {laps.map((lap, index) => {
                         return (
-                            <Lap 
-                                key={index} 
-                                index={index + 1} 
-                                time={lap} />
+                            <Lap
+                                key={index}
+                                index={lap.id}
+                                time={lap.time} />
                         );
                     })}
                 </ScrollView>
