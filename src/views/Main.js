@@ -138,7 +138,7 @@ export default class Main extends Component {
                         );
                     })}
                     {laps.length == 0 && 
-                        <Text style={styles.empty}>No laps created</Text>
+                        <Text style={styles.empty}>NO LAPS CREATED</Text>
                     }
                 </ScrollView>
                 {this.renderBottomMenu()}
@@ -166,6 +166,7 @@ const styles = StyleSheet.create({
         color: 'white',
         marginTop: 48,
         alignSelf: 'center',
-        fontSize: 20
+        fontSize: 20,
+        fontFamily: 'FjallaOne'
     }
 });

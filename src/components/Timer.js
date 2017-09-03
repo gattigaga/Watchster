@@ -135,5 +135,6 @@ const styles = StyleSheet.create({
     time: {
         color: 'white',
         fontSize: 48,
+        fontFamily: 'FjallaOne'
     }
 });

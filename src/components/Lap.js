@@ -40,11 +40,10 @@ Lap.propTypes = {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        paddingHorizontal: 16,
-        paddingVertical: 8,
+        padding: 16,
         backgroundColor: '#111',
         borderBottomWidth: 0.5,
-        borderBottomColor: '#1e1e1e'
+        borderBottomColor: '#222'
     },
     column: {
         flex: 1,
@@ -52,10 +51,12 @@ const styles = StyleSheet.create({
     lapIndex: {
         color: 'white',
         fontSize: 20,
+        fontFamily: 'FjallaOne'
     },
     lapTime: {
         color: 'white',
         fontSize: 20,
-        textAlign: 'right'
+        textAlign: 'right',
+        fontFamily: 'FjallaOne'
     }
 });
